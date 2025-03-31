@@ -3,3 +3,7 @@ body{
     font-size: 17px;
     font-weight: 500;
 }
+.team-card img{
+    width: 70px;
+    height: 70px;
+}
