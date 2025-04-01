@@ -40,7 +40,7 @@ const teamMembers = [
 // creo la mia funzione per destrutturare
 const generateMemberCard = (member) => {
 // creo una stringa dove inserire la mia card
-const card = `<div class="col-12 col-md-6 col-lg-4">
+const card = `<div class="col-4">
                         <div class="team-card text-white m-2" >
                             <div class=" row info d-flex bg-dark">
                                 <div class="col-3">
@@ -53,14 +53,25 @@ const card = `<div class="col-12 col-md-6 col-lg-4">
                                     <p class="mb-0">
                                         ${member.role}
                                     </p>                                    
-                                    <a href="laurarossi@team.com">laurarossi@team.com</a>
+                                    <a href="email_member">${member.email}.com</a>
                                 </div>
                             </div>
                         </div>
                     </div>`
-                    document.getElementById(`team-members`).innerHTML += card
+                    
+        return card;
 }
-// ciclo gli array richiamando la funzione generate membercard
-for(let i=0; i<teamMembers.length;i++){
-  generateMemberCard(teamMembers[i])
+
+// funzione che mi renderizza il contenuto dell'array
+const renderTeam = (array) => {
+  // dichiaro una variabile con valore stringa nuova concatenando le colonne come stringhe
+  let cards = "";
+  for(let i=0; i<array.length; i++){
+    cards += generateMemberCard(array[i])
+  }
+
+  document.getElementById(`team-members`).innerHTML = cards;
 }
+
+// chiamo la funzione
+renderTeam(teamMembers);
