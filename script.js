@@ -43,17 +43,17 @@ const generateMemberCard = (member) => {
 const card = `<div class="col-12 col-md-6 col-lg-4">
                         <div class="team-card text-white m-2" >
                             <div class=" row info d-flex bg-dark">
-                                <div class="col-3">
+                                <div class="col-3 p-0">
                                     <img src="${member.img}" class="img-fluid" alt="team1">
                                 </div>
-                                <div class="col-9 text-right p-1">
+                                <div class="col-9 text-right fw-bold pt-2">
                                     <p class="mb-0">
                                         <b>${member.name}</b>
                                     </p>                                                                         
                                     <p class="mb-0">
                                         ${member.role}
                                     </p>                                    
-                                    <a href="email_member">${member.email}.com</a>
+                                    <a href="email_member" class="p-0" >${member.email}.com</a>
                                 </div>
                             </div>
                         </div>

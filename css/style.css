@@ -8,4 +8,9 @@ body{
     object-fit: cover;
 
 }
-
+ 
+h1{
+    font-size: 50px;
+    color: #e54848;
+    font-weight: 800;
+}
