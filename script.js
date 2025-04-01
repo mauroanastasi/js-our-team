@@ -40,7 +40,7 @@ const teamMembers = [
 // creo la mia funzione per destrutturare
 const generateMemberCard = (member) => {
 // creo una stringa dove inserire la mia card
-const card = `<div class="col-4">
+const card = `<div class="col-12 col-md-6 col-lg-4">
                         <div class="team-card text-white m-2" >
                             <div class=" row info d-flex bg-dark">
                                 <div class="col-3">
